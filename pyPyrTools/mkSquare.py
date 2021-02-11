@@ -26,17 +26,17 @@ def mkSquare(*args):
     #REQUIRED ARGS:
 
     if len(args) < 2:
-        print "mkSquare(SIZE, PERIOD, DIRECTION, AMPLITUDE, PHASE, ORIGIN, TWIDTH)"
-        print "       or"
-        print "mkSquare(SIZE, FREQ, AMPLITUDE, PHASE, ORIGIN, TWIDTH)"
-        print "first two arguments are required"
+        print("mkSquare(SIZE, PERIOD, DIRECTION, AMPLITUDE, PHASE, ORIGIN, TWIDTH)")
+        print("       or")
+        print("mkSquare(SIZE, FREQ, AMPLITUDE, PHASE, ORIGIN, TWIDTH)")
+        print("first two arguments are required")
         exit(1)
     else:
         sz = args[0]
         if isinstance(sz, (int)):
             sz = (sz, sz)
         elif not isinstance(sz, (tuple)):
-            print "first argument must be a two element tuple or an integer"
+            print("first argument must be a two element tuple or an integer")
             exit(1)
     
     if isinstance(args[1], (int, float, long)):

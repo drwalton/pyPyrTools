@@ -18,8 +18,8 @@ def blur(*args):
 
     # REQUIRED ARG:
     if len(args) == 0:
-        print "blur(IM, LEVELS, FILT)"
-        print "first argument is required"
+        print("blur(IM, LEVELS, FILT)")
+        print("first argument is required")
         exit(1)
     else:
         im = numpy.array(args[0])
@@ -49,7 +49,7 @@ def blur(*args):
         if len(im.shape) == 1 or im.shape[0] == 1 or im.shape[1] == 1: 
             # 1D image
             if len(filt) == 2 and (numpy.asarray(filt.shape) != 1).any():
-                print 'Error: can not apply 2D filter to 1D signal'
+                print('Error: can not apply 2D filter to 1D signal')
                 return
             
             imIn = corrDn(im, filt, 'reflect1', len(im))

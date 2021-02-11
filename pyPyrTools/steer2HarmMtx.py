@@ -11,7 +11,7 @@ def steer2HarmMtx(*args):
         mtx = steer2HarmMtx(harmonics, angles, evenorodd)  '''
 
     if len(args) == 0:
-        print "Error: first parameter 'harmonics' is required."
+        print("Error: first parameter 'harmonics' is required.")
         return
     
     if len(args) > 0:
@@ -31,10 +31,10 @@ def steer2HarmMtx(*args):
             elif args[2] == 'odd' or args[2] == 'ODD':
                 evenorodd = 1
             else:
-                print "Error: only 'even' and 'odd' are valid entries for the third input parameter."
+                print("Error: only 'even' and 'odd' are valid entries for the third input parameter.")
                 return
         else:
-            print "Error: third input parameter must be a string (even/odd)."
+            print("Error: third input parameter must be a string (even/odd).")
     else:
         evenorodd = 0
 
@@ -58,7 +58,7 @@ def steer2HarmMtx(*args):
 
     r = numpy.rank(imtx)
     if r != numh and r != angles.shape[0]:
-        print "Warning: matrix is not full rank"
+        print("Warning: matrix is not full rank")
 
     mtx = numpy.linalg.pinv(imtx)
     

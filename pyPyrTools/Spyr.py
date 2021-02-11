@@ -179,10 +179,10 @@ class Spyr(pyramid):
             elif args[0] == 'sp5Filters':
                 filters = sp5Filters()
             elif os.path.isfile(args[0]):
-                print "Filter files not supported yet"
+                print("Filter files not supported yet")
                 return
             else:
-                print "filter %s not supported" % (args[0])
+                print("filter %s not supported" % (args[0]))
                 return
         else:
             filters = sp1Filters()

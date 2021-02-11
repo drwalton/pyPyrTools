@@ -305,7 +305,7 @@ class Lpyr(pyramid):
             stdev = numpy.std(band)
             pRange[nind,:] = numpy.array([av-2*stdev, av+2*stdev])
         elif isinstance(pRange, basestring):
-            print "Error: band range argument: %s" % (pRange)
+            print("Error: band range argument: %s" % (pRange))
             return
         elif pRange.shape[0] == 1 and pRange.shape[1] == 2:
             scales = numpy.power( numpy.array( range(0,nind) ), scale)

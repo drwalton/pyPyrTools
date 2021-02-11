@@ -18,7 +18,7 @@ class SCFpyr(SFpyr):
         if len(args) > 0:
             self.image = args[0]
         else:
-            print "First argument (image) is required."
+            print("First argument (image) is required.")
             return
 
         #------------------------------------------------
@@ -27,7 +27,7 @@ class SCFpyr(SFpyr):
         max_ht = numpy.floor( numpy.log2( min(self.image.shape) ) ) - 2
         if len(args) > 1:
             if(args[1] > max_ht):
-                print "Error: cannot build pyramid higher than %d levels." % (max_ht)
+                print("Error: cannot build pyramid higher than %d levels." % (max_ht))
             ht = args[1]
         else:
             ht = max_ht
@@ -35,7 +35,7 @@ class SCFpyr(SFpyr):
             
         if len(args) > 2:
             if args[2] > 15 or args[2] < 0:
-                print "Warning: order must be an integer in the range [0,15]. Truncating."
+                print("Warning: order must be an integer in the range [0,15]. Truncating.")
                 order = min( max(args[2],0), 15 )
             else:
                 order = args[2]
@@ -46,7 +46,7 @@ class SCFpyr(SFpyr):
 
         if len(args) > 3:
             if args[3] <= 0:
-                print "Warning: twidth must be positive. Setting to 1."
+                print("Warning: twidth must be positive. Setting to 1.")
                 twidth = 1
             else:
                 twidth = args[3]
@@ -168,7 +168,7 @@ class SCFpyr(SFpyr):
 
         if len(args) > 2:
             if args[2] <= 0:
-                print "Warning: twidth must be positive. Setting to 1."
+                print("Warning: twidth must be positive. Setting to 1.")
                 twidth = 1
             else:
                 twidth = args[2]

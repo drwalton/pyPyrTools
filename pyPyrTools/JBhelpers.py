@@ -100,7 +100,7 @@ def nbimageLCVbak( data, vmin = None, vmax = None, vsym = False, saveas = None,
 
     # try to be smart
     if 3 <= data.shape[ 0 ] <= 4:
-        print 'transposing'
+        print('transposing')
         data = data.transpose( ( 1, 2, 0 ) )
 
     s = StringIO()
@@ -145,7 +145,7 @@ def nbimageLCVbak2( data, vmin = None, vmax = None, vsym = False, saveas = None,
     data = data.squeeze()
     # try to be smart
     if 3 <= data.shape[ 0 ] <= 4:
-        print 'transposing'
+        print('transposing')
         data = data.transpose( ( 1, 2, 0 ) )
     s = StringIO()
     fromarray( data ).save( s, 'png' )
@@ -157,7 +157,7 @@ def nbimageLCVbak2( data, vmin = None, vmax = None, vsym = False, saveas = None,
 
     matrix = numpy.require(data, numpy.uint8, 'C')
     (w, h) = matrix.shape
-    print matrix
+    print(matrix)
     qim = QtGui.QImage(matrix.data, w, h, QtGui.QImage.Format_Indexed8)
     qim.ndarray = matrix    # do we need this?
     

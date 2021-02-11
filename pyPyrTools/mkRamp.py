@@ -11,15 +11,15 @@ def mkRamp(*args):
         optional '''
     
     if len(args) == 0:
-        print "mkRamp(SIZE, DIRECTION, SLOPE, INTERCEPT, ORIGIN)"
-        print "first argument is required"
+        print("mkRamp(SIZE, DIRECTION, SLOPE, INTERCEPT, ORIGIN)")
+        print("first argument is required")
         exit(1)
     else:
         sz = args[0]
         if isinstance(sz, (int)):
             sz = (sz, sz)
         elif not isinstance(sz, (tuple)):
-            print "first argument must be a two element tuple or an integer"
+            print("first argument must be a two element tuple or an integer")
             exit(1)
 
     # OPTIONAL args:

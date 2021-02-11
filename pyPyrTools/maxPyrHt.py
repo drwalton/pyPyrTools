@@ -16,7 +16,7 @@ def maxPyrHt(imsz, filtsz):
         #if filtsz[1] == 1:  # new
         #    filtsz = (filtsz[1], filtsz[0])
         #if imsz[0] < filtsz[0] or imsz[1] < filtsz[1]:
-        #    print 'flag 2'
+        #    print('flag 2')
         #    return 0
 
     if not isinstance(imsz, tuple) and not isinstance(filtsz, tuple):
@@ -32,7 +32,7 @@ def maxPyrHt(imsz, filtsz):
     #elif 1 in filtsz:   # 2D image, 1D filter
     else:   # 2D image
         #filtsz = (filtsz[0], filtsz[0])
-        #print filtsz
+        #print(filtsz)
         if ( imsz[0] < filtsz[0] or imsz[0] < filtsz[1] or
              imsz[1] < filtsz[0] or imsz[1] < filtsz[1] ):
             return 0
@@ -86,8 +86,8 @@ def maxPyrHt(imsz, filtsz):
         filtsz = (filtsz, filtsz)
 
 
-    print imsz
-    print filtsz
+    print(imsz)
+    print(filtsz)
     
     if isinstance(imsz, tuple) and isinstance(filtsz, tuple):
         if min(imsz) < max(filtsz):

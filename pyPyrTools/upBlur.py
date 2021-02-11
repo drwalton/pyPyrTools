@@ -20,8 +20,8 @@ def upBlur(*args):
     # REQUIRED ARGS
     
     if len(args) == 0:
-        print 'Usage: upBlur(image, levels, filter)'
-        print 'first argument is required'
+        print('Usage: upBlur(image, levels, filter)')
+        print('first argument is required')
     else:
         im = numpy.array(args[0])
 
