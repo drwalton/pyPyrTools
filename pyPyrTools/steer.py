@@ -1,5 +1,5 @@
 import numpy
-from steer2HarmMtx import steer2HarmMtx
+from .steer2HarmMtx import steer2HarmMtx
 
 def steer(basis, angle, harmonics=None, steermtx=None):
     '''Steer BASIS to the specfied ANGLE.

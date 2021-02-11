@@ -1,4 +1,4 @@
-from binomialFilter import binomialFilter
+from .binomialFilter import binomialFilter
 import math
 import numpy
 

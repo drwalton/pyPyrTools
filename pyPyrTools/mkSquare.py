@@ -1,8 +1,8 @@
 import numpy
 import math
-from mkRamp import mkRamp
-from rcosFn import rcosFn
-from pointOp import pointOp
+from .mkRamp import mkRamp
+from .rcosFn import rcosFn
+from .pointOp import pointOp
 
 def mkSquare(*args):
     ''' IM = mkSquare(SIZE, PERIOD, DIRECTION, AMPLITUDE, PHASE, ORIGIN, TWIDTH)

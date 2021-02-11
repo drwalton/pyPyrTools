@@ -1,5 +1,5 @@
 import numpy
-from var2 import var2
+from .var2 import var2
 
 def skew2(*args):
     ''' Sample skew (third moment divided by variance^3/2) of a matrix.

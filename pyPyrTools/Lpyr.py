@@ -1,10 +1,10 @@
-from pyramid import pyramid
-from corrDn import corrDn
-from namedFilter import namedFilter
-from maxPyrHt import maxPyrHt
-from upConv import upConv
-from showIm import showIm
-import JBhelpers
+from .pyramid import pyramid
+from .corrDn import corrDn
+from .namedFilter import namedFilter
+from .maxPyrHt import maxPyrHt
+from .upConv import upConv
+from .showIm import showIm
+from .JBhelpers import *
 import numpy
 import math
 import matplotlib

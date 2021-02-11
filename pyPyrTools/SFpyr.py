@@ -1,8 +1,8 @@
-from Spyr import Spyr
+from .Spyr import Spyr
 import numpy
-from steer2HarmMtx import steer2HarmMtx
-from rcosFn import rcosFn
-from pointOp import pointOp
+from .steer2HarmMtx import steer2HarmMtx
+from .rcosFn import rcosFn
+from .pointOp import pointOp
 import scipy
 import warnings
 

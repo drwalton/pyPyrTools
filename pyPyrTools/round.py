@@ -1,5 +1,5 @@
 import numpy
-from roundVal import roundVal
+from .roundVal import roundVal
 
 def round(arr):
     ''' round equivalent to matlab function

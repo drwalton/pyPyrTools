@@ -1,5 +1,5 @@
 import numpy
-from mkAngle import mkAngle
+from .mkAngle import mkAngle
 
 def mkAngularSine(*args):
     ''' IM = mkAngularSine(SIZE, HARMONIC, AMPL, PHASE, ORIGIN)

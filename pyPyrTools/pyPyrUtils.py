@@ -9,7 +9,7 @@ import math
 import struct
 import re
 import sys
-import JBhelpers
+from .JBhelpers import *
 import PIL
 from PIL import ImageTk
 import tkinter

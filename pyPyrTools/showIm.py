@@ -4,7 +4,7 @@ import PIL
 import scipy.stats
 import tkinter
 import math
-from round import round
+from .round import round
 
 def showIm(*args):
     # check and set input parameters

@@ -1,11 +1,11 @@
-from Lpyr import Lpyr
-from LB2idx import LB2idx
-from namedFilter import namedFilter
-from modulateFlip import modulateFlip
-from maxPyrHt import maxPyrHt
-from corrDn import corrDn
-from upConv import upConv
-import JBhelpers
+from .Lpyr import Lpyr
+from .LB2idx import LB2idx
+from .namedFilter import namedFilter
+from .modulateFlip import modulateFlip
+from .maxPyrHt import maxPyrHt
+from .corrDn import corrDn
+from .upConv import upConv
+from .JBhelpers import *
 import numpy
 import matplotlib
 import pylab

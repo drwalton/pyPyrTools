@@ -1,5 +1,5 @@
 import numpy
-from mkR import mkR
+from .mkR import mkR
 
 def mkZonePlate(*args):
     ''' IM = mkZonePlate(SIZE, AMPL, PHASE)

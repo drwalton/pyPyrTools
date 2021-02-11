@@ -1,6 +1,6 @@
 import numpy
 import math
-from mkRamp import mkRamp
+from .mkRamp import mkRamp
 
 def mkSine(*args):
     ''' IM = mkSine(SIZE, PERIOD, DIRECTION, AMPLITUDE, PHASE, ORIGIN)

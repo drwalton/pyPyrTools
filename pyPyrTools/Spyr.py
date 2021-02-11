@@ -1,19 +1,19 @@
-from pyramid import pyramid
+from .pyramid import pyramid
 import numpy
-from sp0Filters import sp0Filters
-from sp1Filters import sp1Filters
-from sp3Filters import sp3Filters
-from sp5Filters import sp5Filters
+from .sp0Filters import sp0Filters
+from .sp1Filters import sp1Filters
+from .sp3Filters import sp3Filters
+from .sp5Filters import sp5Filters
 import os
-from maxPyrHt import maxPyrHt
-from corrDn import corrDn
+from .maxPyrHt import maxPyrHt
+from .corrDn import corrDn
 import math
-from LB2idx import LB2idx
+from .LB2idx import LB2idx
 import matplotlib
-from showIm import showIm
-import JBhelpers
-from upConv import upConv
-import pyPyrUtils
+from .showIm import showIm
+from .JBhelpers import *
+from .upConv import upConv
+from .pyPyrUtils import *
 
 class Spyr(pyramid):
     filt = ''

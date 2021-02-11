@@ -1,5 +1,5 @@
 import numpy
-from corrDn import corrDn
+from .corrDn import corrDn
 
 def imGradient(*args):
     ''' [dx, dy] = imGradient(im, edges) 

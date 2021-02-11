@@ -1,8 +1,8 @@
 import numpy
 import sys
-from mkR import mkR
-from rcosFn import rcosFn
-from pointOp import pointOp
+from .mkR import mkR
+from .rcosFn import rcosFn
+from .pointOp import pointOp
 
 def mkDisc(*args):
     ''' IM = mkDisc(SIZE, RADIUS, ORIGIN, TWIDTH, VALS)

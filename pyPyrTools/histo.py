@@ -1,6 +1,6 @@
 import numpy
-from range2 import range2
-from round import round
+from .range2 import range2
+from .round import round
 
 def histo(*args):
     ''' [N,X] = histo(MTX, nbinsOrBinsize, binCenter);

@@ -1,7 +1,7 @@
 import numpy
-from range2 import range2
-from var2 import var2
-from kurt2 import kurt2
+from .range2 import range2
+from .var2 import var2
+from .kurt2 import kurt2
 
 def imStats(*args):
     ''' Report image (matrix) statistics.

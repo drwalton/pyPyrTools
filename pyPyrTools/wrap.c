@@ -19,6 +19,15 @@
 #include "convolve.h"
 
 /*
+#include <Python.h>
+
+PyMODINIT_FUNC
+PyInit_wrapConv(void)
+{}
+*/
+
+
+/*
  --------------------------------------------------------------------
  Performs correlation (i.e., convolution with filt(-x,-y)) of FILT
  with IMAGE followed by subsampling (a.k.a. REDUCE in Burt&Adelson81).
