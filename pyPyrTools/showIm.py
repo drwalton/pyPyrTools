@@ -2,7 +2,7 @@ import numpy
 from PIL import ImageTk
 import PIL
 import scipy.stats
-import Tkinter
+import tkinter
 import math
 from round import round
 
@@ -73,18 +73,18 @@ def showIm(*args):
         nshades = 256
 
     # create window
-    #master = Tkinter.Tk()
-    master = Tkinter.Toplevel()
+    #master = tkinter.Tk()
+    master = tkinter.Toplevel()
     master.title('showIm')
     canvas_width = matrix.shape[0] * zoom
     canvas_height = matrix.shape[1] * zoom
     master.geometry(str(canvas_width+20) + "x" + str(canvas_height+60) +
                     "+200+200")
     # put in top spacer
-    spacer = Tkinter.Label(master, text='').pack()
+    spacer = tkinter.Label(master, text='').pack()
     
     # create canvas
-    canvas = Tkinter.Canvas(master, width=canvas_width, height=canvas_height)
+    canvas = tkinter.Canvas(master, width=canvas_width, height=canvas_height)
     canvas.pack()
     # shift matrix to 0.0-1.0 then to 0-255
     if (matrix < 0).any():
@@ -115,12 +115,12 @@ def showIm(*args):
 
     # apply image to canvas
     imgPI = ImageTk.PhotoImage(img)    
-    canvas.create_image(0,0, anchor=Tkinter.NW, image=imgPI)
+    canvas.create_image(0,0, anchor=tkinter.NW, image=imgPI)
 
     # add labels
     rangeStr = 'Range: [%.1f, %.1f]' % (imRange[0], imRange[1])
-    rangeLabel = Tkinter.Label(master, text=rangeStr).pack()
+    rangeLabel = tkinter.Label(master, text=rangeStr).pack()
     dimsStr = 'Dims: [%d, %d] / %d' % (matrix.shape[0], matrix.shape[1], zoom)
-    dimsLabel = Tkinter.Label(master, text=dimsStr).pack()
+    dimsLabel = tkinter.Label(master, text=dimsStr).pack()
     
-    Tkinter.mainloop()
+    tkinter.mainloop()
