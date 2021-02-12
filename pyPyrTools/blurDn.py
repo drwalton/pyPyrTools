@@ -28,7 +28,7 @@ def blurDn(*args):
 
     if len(args) > 2:
         filt = args[2]
-        if isinstance(filt, basestring):
+        if isinstance(filt, str):
             filt = namedFilter(filt)
     else:
         filt = namedFilter('binom5')

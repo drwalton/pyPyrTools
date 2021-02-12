@@ -34,7 +34,7 @@ def showIm(*args):
         matrix = numpy.array(args[0])
 
     if len(args) > 1:   # range entered
-        if isinstance(args[1], basestring):
+        if isinstance(args[1], str):
             if args[1] == "auto":
                 imRange = ( numpy.amin(matrix), numpy.amax(matrix) )
             elif args[1] == "auto2":

@@ -212,17 +212,17 @@ class SFpyr(Spyr):
         nbands = self.numBands()
         
         maxLev = 1 + self.spyrHt()
-        if isinstance(levs, basestring) and levs == 'all':
+        if isinstance(levs, str) and levs == 'all':
             levs = numpy.array(range(maxLev+1))
-        elif isinstance(levs, basestring):
+        elif isinstance(levs, str):
             raise Exception("%s not valid for levs parameter. levs must be either a 1D numpy array"
                             " or the string 'all'." % levs)
         else:
             levs = numpy.array(levs)
 
-        if isinstance(bands, basestring) and bands == 'all':
+        if isinstance(bands, str) and bands == 'all':
             bands = numpy.array(range(nbands))
-        elif isinstance(bands, basestring):
+        elif isinstance(bands, str):
             raise Exception("%s not valid for bands parameter. bands must be either a 1D numpy"
                             " array or the string 'all'." % bands)
             return

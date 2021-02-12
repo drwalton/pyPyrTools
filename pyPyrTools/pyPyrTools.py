@@ -383,7 +383,7 @@ class Spyr(pyramid):
             av = numpy.mean(band)
             stdev = numpy.sqrt( numpy.var(band) )
             prange[nind-1,:] = numpy.array([av-2*stdev, av+2*stdev])
-        elif isinstance(prange, basestring):
+        elif isinstance(prange, str):
             print("Error:Bad RANGE argument: %s'" % (prange))
         elif prange.shape[0] == 1 and prange.shape[1] == 2:
             scales = numpy.power(scale, range(ht))
@@ -651,18 +651,18 @@ class SFpyr(Spyr):
         nbands = self.numBands()
         
         maxLev = 1 + self.spyrHt()
-        if isinstance(levs, basestring) and levs == 'all':
+        if isinstance(levs, str) and levs == 'all':
             levs = numpy.array(range(maxLev+1))
-        elif isinstance(levs, basestring):
+        elif isinstance(levs, str):
             print("Error: %s not valid for levs parameter." % (levs))
             print("levs must be either a 1D numpy array or the string 'all'.")
             return
         else:
             levs = numpy.array(levs)
 
-        if isinstance(bands, basestring) and bands == 'all':
+        if isinstance(bands, str) and bands == 'all':
             bands = numpy.array(range(nbands))
-        elif isinstance(bands, basestring):
+        elif isinstance(bands, str):
             print("Error: %s not valid for bands parameter." % (bands))
             print("bands must be either a 1D numpy array or the string 'all'.")
             return
@@ -1070,7 +1070,7 @@ class Lpyr(pyramid):
 
         if len(args) > 2:
             filt1 = args[2]
-            if isinstance(filt1, basestring):
+            if isinstance(filt1, str):
                 filt1 = pyPyrUtils.namedFilter(filt1)
             elif len(filt1.shape) != 1 and ( filt1.shape[0] != 1 and
                                              filt1.shape[1] != 1 ):
@@ -1085,7 +1085,7 @@ class Lpyr(pyramid):
 
         if len(args) > 3:
             filt2 = args[3]
-            if isinstance(filt2, basestring):
+            if isinstance(filt2, str):
                 filt2 = pyPyrUtils.namedFilter(filt2)
             elif len(filt2.shape) != 1 and ( filt2.shape[0] != 1 and
                                             filt2.shape[1] != 1 ):
@@ -1230,7 +1230,7 @@ class Lpyr(pyramid):
                         (maxLev-1) ))
                 return
 
-        if isinstance(filt2, basestring):
+        if isinstance(filt2, str):
             filt2 = pyPyrUtils.namedFilter(filt2)
         else:
             if len(filt2.shape) == 1:
@@ -1354,7 +1354,7 @@ class Lpyr(pyramid):
             av = numpy.mean(band)
             stdev = numpy.std(band)
             pRange[nind,:] = numpy.array([av-2*stdev, av+2*stdev])
-        elif isinstance(pRange, basestring):
+        elif isinstance(pRange, str):
             print("Error: band range argument: %s" % (pRange))
             return
         elif pRange.shape[0] == 1 and pRange.shape[1] == 2:
@@ -1531,7 +1531,7 @@ class Wpyr(Lpyr):
             filt = args[2]
         else:
             filt = "qmf9"
-        if isinstance(filt, basestring):
+        if isinstance(filt, str):
             filt = pyPyrUtils.namedFilter(filt)
 
         if len(filt.shape) != 1 and filt.shape[0] != 1 and filt.shape[1] != 1:
@@ -1699,7 +1699,7 @@ class Wpyr(Lpyr):
             if (bands < 0).any() or (bands > 2).any():
                 print("Error: band numbers must be in the range [0,2].")
         
-        if isinstance(filt, basestring):
+        if isinstance(filt, str):
             filt = pyPyrUtils.namedFilter(filt)
 
         hfilt = pyPyrUtils.modulateFlip(filt).T
@@ -1967,7 +1967,7 @@ class Wpyr(Lpyr):
             av = numpy.mean(band)
             stdev = numpy.sqrt( numpy.var(band) )
             prange[nind-1,:] = numpy.array([av-2*stdev, av+2*stdev])
-        elif isinstance(prange, basestring):
+        elif isinstance(prange, str):
             print("Error:Bad RANGE argument: %s'" % (prange))
         elif prange.shape[0] == 1 and prange.shape[1] == 2:
             scales = numpy.power(scale, range(ht))

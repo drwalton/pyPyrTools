@@ -34,7 +34,7 @@ class Wpyr(Lpyr):
             filt = args[2]
         else:
             filt = "qmf9"
-        if isinstance(filt, basestring):
+        if isinstance(filt, str):
             filt = namedFilter(filt)
 
         if len(filt.shape) != 1 and filt.shape[0] != 1 and filt.shape[1] != 1:
@@ -187,7 +187,7 @@ class Wpyr(Lpyr):
             if (bands < 0).any() or (bands > 2).any():
                 print("Error: band numbers must be in the range [0,2].")
         
-        if isinstance(filt, basestring):
+        if isinstance(filt, str):
             filt = namedFilter(filt)
 
         hfilt = modulateFlip(filt).T
@@ -410,7 +410,7 @@ class Wpyr(Lpyr):
             av = numpy.mean(band)
             stdev = numpy.sqrt( numpy.var(band) )
             prange[nind-1,:] = numpy.array([av-2*stdev, av+2*stdev])
-        elif isinstance(prange, basestring):
+        elif isinstance(prange, str):
             print("Error:Bad RANGE argument: %s'" % (prange))
         elif prange.shape[0] == 1 and prange.shape[1] == 2:
             scales = numpy.power(scale, range(ht))

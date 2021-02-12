@@ -57,9 +57,9 @@ class SCFpyr(SFpyr):
         # steering stuff:
 
         if nbands % 2 == 0:
-            harmonics = numpy.array(range(nbands/2)) * 2 + 1
+            harmonics = numpy.array(range(nbands//2)) * 2 + 1
         else:
-            harmonics = numpy.array(range((nbands-1)/2)) * 2
+            harmonics = numpy.array(range((nbands-1)//2)) * 2
 
         steermtx = steer2HarmMtx(harmonics,
                                  numpy.pi*numpy.array(range(nbands))/nbands,

@@ -1640,7 +1640,7 @@ def steer2HarmMtx(*args):
         angles = numpy.pi * numpy.array(range(numh)) / numh
         
     if len(args) > 2:
-        if isinstance(args[2], basestring):
+        if isinstance(args[2], str):
             if args[2] == 'even' or args[2] == 'EVEN':
                 evenorodd = 0
             elif args[2] == 'odd' or args[2] == 'ODD':
@@ -1827,7 +1827,7 @@ def blurDn(*args):
 
     if len(args) > 2:
         filt = args[2]
-        if isinstance(filt, basestring):
+        if isinstance(filt, str):
             filt = namedFilter(filt)
     else:
         filt = namedFilter('binom5')
@@ -1902,7 +1902,7 @@ def blur(*args):
         nlevs = 1
 
     if len(args) > 2:
-        if isinstance(args[2], basestring):
+        if isinstance(args[2], str):
             filt = namedFilter(args[2])
         else:
             filt = numpy.array(args[2])
@@ -2323,7 +2323,7 @@ def showIm_old(*args):
     #print('showIm range %f %f' % (matrix.min(), matrix.max()))
 
     if len(args) > 1:   # range entered
-        if isinstance(args[1], basestring):
+        if isinstance(args[1], str):
             if args[1] == "auto":
                 imRange = ( numpy.amin(matrix), numpy.amax(matrix) )
             elif args[1] == "auto2":
@@ -2463,7 +2463,7 @@ def showIm(*args):
     #print('showIm range %f %f' % (matrix.min(), matrix.max())
 
     if len(args) > 1:   # range entered
-        if isinstance(args[1], basestring):
+        if isinstance(args[1], str):
             if args[1] == "auto":
                 imRange = ( numpy.amin(matrix), numpy.amax(matrix) )
             elif args[1] == "auto2":
@@ -3100,7 +3100,7 @@ def upBlur(*args):
 
     #------------------------------------------------------------------
 
-    if isinstance(filt, basestring):
+    if isinstance(filt, str):
         filt = namedFilter(filt)
 
     if nlevs > 1:

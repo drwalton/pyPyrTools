@@ -31,7 +31,7 @@ def blur(*args):
         nlevs = 1
 
     if len(args) > 2:
-        if isinstance(args[2], basestring):
+        if isinstance(args[2], str):
             filt = namedFilter(args[2])
         else:
             filt = numpy.array(args[2])

@@ -14,7 +14,7 @@ class Gpyr(Lpyr):
         self.pyrType = 'Gaussian'
         self.image = image
 
-        if isinstance(filt, basestring):
+        if isinstance(filt, str):
             self.filt = namedFilter(filt)
         else:
             self.filt = filt

@@ -25,7 +25,7 @@ def steer2HarmMtx(*args):
         angles = numpy.pi * numpy.array(range(numh)) / numh
         
     if len(args) > 2:
-        if isinstance(args[2], basestring):
+        if isinstance(args[2], str):
             if args[2] == 'even' or args[2] == 'EVEN':
                 evenorodd = 0
             elif args[2] == 'odd' or args[2] == 'ODD':

@@ -40,7 +40,7 @@ def upBlur(*args):
 
     #------------------------------------------------------------------
 
-    if isinstance(filt, basestring):
+    if isinstance(filt, str):
         filt = namedFilter(filt)
 
     if nlevs > 1:
