@@ -33,23 +33,23 @@ typedef struct
 
 typedef double image_type;
 
-fptr edge_function(char *edges);
-int internal_reduce(image_type *image, int x_idim, int y_idim, 
+__declspec(dllexport) fptr edge_function(char *edges);
+__declspec(dllexport) int internal_reduce(image_type *image, int x_idim, int y_idim, 
 		    image_type *filt, image_type *temp, int x_fdim, int y_fdim,
 		    int x_start, int x_step, int x_stop, 
 		    int y_start, int y_step, int y_stop,
 		    image_type *result, char *edges);
-int internal_expand(image_type *image, 
+__declspec(dllexport) int internal_expand(image_type *image, 
 		    image_type *filt, image_type *temp, int x_fdim, int y_fdim,
 		    int x_start, int x_step, int x_stop, 
 		    int y_start, int y_step, int y_stop,
 		    image_type *result, int x_rdim, int y_rdim, char *edges);
-int internal_wrap_reduce(image_type *image, int x_idim, int y_idim, 
+__declspec(dllexport) int internal_wrap_reduce(image_type *image, int x_idim, int y_idim, 
 			 image_type *filt, int x_fdim, int y_fdim,
 			 int x_start, int x_step, int x_stop, 
 			 int y_start, int y_step, int y_stop,
 			 image_type *result);
-int internal_wrap_expand(image_type *image, image_type *filt, int x_fdim, int y_fdim,
+__declspec(dllexport) int internal_wrap_expand(image_type *image, image_type *filt, int x_fdim, int y_fdim,
 			 int x_start, int x_step, int x_stop, 
 			 int y_start, int y_step, int y_stop,
 			 image_type *result, int x_rdim, int y_rdim);
